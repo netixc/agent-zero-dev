@@ -1,0 +1,871 @@
+speech.js:503 Audio autoplay enabled via AudioContext
+index.js:291 setMessage: id=ca1a647c-7066-4226-9685-02c4444eb87e type=user heading="User message" content="hello search some adult joke for me" temp=false kvps= {attachments: Array(0)}
+index.js:291 setMessage: id=1 type=info heading="" content="Searching memories..." temp=true kvps= {}
+index.js:291 setMessage: id=2 type=util heading="Searching memories..." content="" temp=false kvps= {}
+index.js:291 setMessage: id=3 type=info heading="" content="Searching memory for solutions..." temp=true kvps= {}
+index.js:291 setMessage: id=4 type=util heading="Searching memory for solutions..." content="" temp=false kvps= {}
+index.js:291 setMessage: id=4 type=util heading="Searching memory for solutions..." content="" temp=false kvps= {query: 'adult jokes'}
+index.js:291 setMessage: id=5 type=util heading="Initializing VectorDB in '/default'" content="" temp=false kvps= {progress: '\nInitializing VectorDB'}
+index.js:291 setMessage: id=5 type=util heading="Preloading knowledge..." content="" temp=false kvps= {progress: '\nInitializing VectorDB\nFound 2 knowledge files in …processing...\nProcessed 0 documents from 0 files.'}
+index.js:291 setMessage: id=2 type=util heading="Searching memories..." content="" temp=false kvps= {query: '"adult jokes"'}
+index.js:291 setMessage: id=2 type=util heading="3 memories found" content="" temp=false kvps= {query: '"adult jokes"', memories: 'User is looking for adult jokes.\n\nSeveral sources …\n\nUser asked for jokes that are not kid-friendly.'}
+index.js:291 setMessage: id=4 type=util heading="0 instruments, 1 solutions found" content="" temp=false kvps= {query: 'adult jokes', solutions: '# Problem\n User requested adult jokes that are edg….\n4. Present the jokes one at a time to the user.'}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="" temp=false kvps= {}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User" temp=false kvps= {thoughts: Array(1)}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking" temp=false kvps= {thoughts: Array(1)}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I" temp=false kvps= {thoughts: Array(3)}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs" temp=false kvps= {thoughts: Array(3)}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the" temp=false kvps= {thoughts: Array(3)}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool" temp=false kvps= {thoughts: Array(3), tool: null}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "br" temp=false kvps= {thoughts: Array(3), tool_name: 'br'}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web'}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', "": null}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "tool_args": {
+        "" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', tool_args: {…}}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "tool_args": {
+        "query": "fun" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', tool_args: {…}}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "tool_args": {
+        "query": "funny adult jokes",
+        "" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', tool_args: {…}}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "tool_args": {
+        "query": "funny adult jokes",
+        "count": 5" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', tool_args: {…}}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "tool_args": {
+        "query": "funny adult jokes",
+        "count": 5
+    }
+" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', tool_args: {…}}
+index.js:291 setMessage: id=6 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "User is looking for adult jokes.",
+        "I will perform a web search for funny adult jokes.",
+        "I will extract relevant URLs from the search results."
+    ],
+    "tool_name": "brave.brave_web_search",
+    "tool_args": {
+        "query": "funny adult jokes",
+        "count": 5
+    }
+}" temp=false kvps= {thoughts: Array(3), tool_name: 'brave.brave_web_search', tool_args: {…}}
+index.js:291 setMessage: id=7 type=tool heading="Agent 0: Using tool 'brave.brave_web_search'" content="" temp=false kvps= {}
+index.js:291 setMessage: id=7 type=tool heading="Agent 0: Using tool 'brave.brave_web_search'" content="Title: Funny Adult Jokes & Humour
+Description: See posts, photos and more on Facebook
+URL: https://www.facebook.com/groups/funnyadultjokesandhumour/
+
+Title: Sex Jokes
+Description: Watch our huge library of the best stand-up comedy videos, get information on our stand-up comedians, read our <strong>joke</strong> of the day, and buy tickets to live shows at our comedy clubs.
+URL: https://www.laughfactory.com/jokes/sex-jokes
+
+Title: 105 Dirty Jokes That Will Definitely Make You Blush
+Description: Related: LOL! 101 Knock Knock <strong>Jokes</strong> For Kids and <strong>Adults</strong> That Are So Bad They&#x27;re <strong>Funny</strong> Good
+URL: https://parade.com/living/dirty-jokes
+
+Title: r/AskReddit on Reddit: What are your best dirty jokes? GO!
+Description: 315 votes, 1.1K comments. 46M subscribers in the AskReddit community. r/AskReddit is the place to ask and answer thought-provoking questions.
+URL: https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/
+
+Title: 170 Funny, Corny Jokes for Kids and Adults
+Description: These cute dad <strong>jokes</strong> <strong>and</strong> <strong>funny</strong> one-liners will have <strong>adults</strong> and kids laughing until their bellies hurt. Check out some of the best corny <strong>jokes</strong> of 2025.
+URL: https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/" temp=false kvps= {}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="" temp=false kvps= {}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with" temp=false kvps= {thoughts: Array(1)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+       " temp=false kvps= {thoughts: Array(1)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the" temp=false kvps= {thoughts: Array(2)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to" temp=false kvps= {thoughts: Array(2)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose" temp=false kvps= {thoughts: Array(3)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source" temp=false kvps= {thoughts: Array(3)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+" temp=false kvps= {thoughts: Array(3)}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name" temp=false kvps= {thoughts: Array(3), tool_name: null}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "" temp=false kvps= {thoughts: Array(3), tool_name: 'response', "": null}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here" temp=false kvps= {tts_trigger: true, tts_text: '**Here'}
+index.js:312 *** TTS: New response starting, stopping current TTS and clearing queue
+index.js:446 *** TTS: Cleared queue (removed 0 items)
+index.js:361 *** TTS DEBUG: New chunk: "Here"
+index.js:364 *** TTS DEBUG: Current sentence buffer: "Here"
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult'}
+index.js:361 *** TTS DEBUG: New chunk: " are some sources for funny adult"
+index.js:364 *** TTS DEBUG: Current sentence buffer: "Here are some sources for funny adult"
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n1. ['}
+index.js:361 *** TTS DEBUG: New chunk: " jokes:
+
+1. ["
+index.js:364 *** TTS DEBUG: Current sentence buffer: "Here are some sources for funny adult jokes:
+
+1. ["
+index.js:381 *** TTS: Queueing complete sentence *** Here are some sources for funny adult jokes:
+
+1.
+index.js:450 *** TTS: processQueue called - isPlaying: false queue length: 1
+index.js:459 *** TTS: Speaking from queue *** Here are some sources for funny adult jokes:
+
+1.
+speech.js:512 Speaking: Here are some sources for funny adult jokes:
+
+1.
+speech.js:547 TTS: Making request via backend proxy with text: Here are some sources for funny adult jokes: 1.
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes'}
+index.js:361 *** TTS DEBUG: New chunk: "Funny Adult Jokes"
+index.js:364 *** TTS DEBUG: Current sentence buffer: "[Funny Adult Jokes"
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour]('}
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…[Funny Adult Jokes & Humour](https://www.facebook'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 1 density: 0.49)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesand" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesand" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…ttps://www.facebook.com/groups/funnyadultjokesand'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 1 density: 0.38)
+speech.js:561 TTS: Response status: 200 Content-Type: audio/mpeg
+speech.js:570 TTS: Audio blob size: 55724 type: audio/mpeg
+speech.js:577 TTS: Created audio URL: blob:https://192.168.50.67:50001/f02eb5bc-25b4-4c0c-a6ba-37b83d229b5e
+speech.js:598 TTS: Starting audio playback
+speech.js:583 TTS: Audio loaded successfully, duration: 3.48
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n….facebook.com/groups/funnyadultjokesandhumour/)\n2'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 2 density: 0.70)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes -" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes -" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…groups/funnyadultjokesandhumour/)\n2. [Sex Jokes -'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 2 density: 0.64)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…mour/)\n2. [Sex Jokes - Laugh Factory](https://www'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 3 density: 0.82)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…Laugh Factory](https://www.laughfactory.com/jokes'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 3 density: 0.73)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…y](https://www.laughfactory.com/jokes/sex-jokes)\n'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 4 density: 0.92)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3." temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3." temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…(https://www.laughfactory.com/jokes/sex-jokes)\n3.'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 4 density: 0.91)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…x-jokes)\n3. [105 Dirty Jokes That Will Definitely'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 4 density: 0.78)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…5 Dirty Jokes That Will Definitely Make You Blush'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 4 density: 0.73)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…ill Definitely Make You Blush](https://parade.com'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 5 density: 0.85)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n… You Blush](https://parade.com/living/dirty-jokes'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 5 density: 0.80)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4." temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4." temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n… Blush](https://parade.com/living/dirty-jokes)\n4.'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 6 density: 0.95)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…://parade.com/living/dirty-jokes)\n4. [r/AskReddit'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 6 density: 0.91)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…-jokes)\n4. [r/AskReddit: What are your best dirty'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 6 density: 0.85)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…dit: What are your best dirty jokes?](https://www'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 7 density: 0.93)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/Ask" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/Ask" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…r best dirty jokes?](https://www.reddit.com/r/Ask'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 7 density: 0.89)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…https://www.reddit.com/r/AskReddit/comments/axoin'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 7 density: 0.85)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_y" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_y" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n….reddit.com/r/AskReddit/comments/axoin/what_are_y'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 7 density: 0.83)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…/comments/axoin/what_are_your_best_dirty_jokes_go'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 7 density: 0.78)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…omments/axoin/what_are_your_best_dirty_jokes_go/)'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 8 density: 0.89)
+index.js:407 *** TTS: Queueing final remaining text *** [Funny Adult Jokes
+index.js:450 *** TTS: processQueue called - isPlaying: true queue length: 1
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…\n5. [170 Funny, Corny Jokes for Kids and Adults]('}
+index.js:305 *** TTS: Skipping link-heavy response (links: 8 density: 0.80)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…for Kids and Adults](https://www.goodhousekeeping'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 9 density: 0.86)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…nd Adults](https://www.goodhousekeeping.com/life/'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 9 density: 0.84)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a417799" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a417799" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…w.goodhousekeeping.com/life/entertainment/a417799'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 9 density: 0.81)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…usekeeping.com/life/entertainment/a41779929/corny'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 9 density: 0.80)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)\n\nFeel free" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)
+
+Feel free" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…/entertainment/a41779929/corny-jokes/)\n\nFeel free'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 10 density: 0.86)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)\n\nFeel free to check them out" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)
+
+Feel free to check them out" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…779929/corny-jokes/)\n\nFeel free to check them out'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 10 density: 0.83)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)\n\nFeel free to check them out for a good laugh" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)
+
+Feel free to check them out for a good laugh" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…s/)\n\nFeel free to check them out for a good laugh'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 10 density: 0.81)
+index.js:291 setMessage: id=8 type=agent heading="Agent 0: Generating" content="{
+    "thoughts": [
+        "I found several sources with adult jokes.",
+        "I will present the URLs for the user to explore.",
+        "The user can choose which source they want to check out."
+    ],
+    "tool_name": "response",
+    "tool_args": {
+        "text": "**Here are some sources for funny adult jokes:**\n\n1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)\n2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)\n3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)\n4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)\n5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)\n\nFeel free to check them out for a good laugh! 😂"
+    }
+}" temp=false kvps= {thoughts: Array(3), tool_name: 'response', tool_args: {…}}
+index.js:291 setMessage: id=9 type=response heading="Agent 0: Responding" content="**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)
+
+Feel free to check them out for a good laugh! 😂" temp=false kvps= {tts_trigger: true, tts_text: '**Here are some sources for funny adult jokes:**\n\n…\nFeel free to check them out for a good laugh! 😂'}
+index.js:305 *** TTS: Skipping link-heavy response (links: 10 density: 0.80)
+index.js:291 setMessage: id=10 type=info heading="" content="Memorizing new information..." temp=true kvps= {}
+index.js:291 setMessage: id=11 type=util heading="Memorizing new information..." content="" temp=false kvps= {}
+index.js:291 setMessage: id=12 type=info heading="" content="Memorizing succesful solutions..." temp=true kvps= {}
+index.js:291 setMessage: id=13 type=util heading="Memorizing succesful solutions..." content="" temp=false kvps= {}
+index.js:291 setMessage: id=13 type=util heading="No successful solutions to memorize." content="[]" temp=false kvps= {}
+index.js:291 setMessage: id=11 type=util heading="Memorizing new information..." content="[
+  "User" temp=false kvps= {}
+index.js:291 setMessage: id=11 type=util heading="Memorizing new information..." content="[
+  "User is looking for adult" temp=false kvps= {}
+index.js:291 setMessage: id=11 type=util heading="Memorizing new information..." content="[
+  "User is looking for adult jokes."
+]" temp=false kvps= {}
+index.js:291 setMessage: id=11 type=util heading="1 entries to memorize." content="[
+  "User is looking for adult jokes."
+]" temp=false kvps= {memories: 'User is looking for adult jokes.'}
+index.js:291 setMessage: id=11 type=util heading="1 entries memorized." content="[
+  "User is looking for adult jokes."
+]" temp=false kvps= {memories: 'User is looking for adult jokes.', replaced: 'area: fragments\nid: faea3fbe-00ff-428c-bddb-5e5b0f…2:17:15\nContent: User is looking for adult jokes.', result: '1 entries memorized.\nReplaced 1 previous memories.'}
+index.js:487 TTS: Queue item finished playing
+index.js:476 *** TTS: Finished playing, processing next item - queue length: 1
+index.js:450 *** TTS: processQueue called - isPlaying: false queue length: 1
+index.js:459 *** TTS: Speaking from queue *** [Funny Adult Jokes
+speech.js:512 Speaking: [Funny Adult Jokes
+speech.js:547 TTS: Making request via backend proxy with text: [Funny Adult Jokes
+speech.js:561 TTS: Response status: 200 Content-Type: audio/mpeg
+speech.js:570 TTS: Audio blob size: 29612 type: audio/mpeg
+speech.js:577 TTS: Created audio URL: blob:https://192.168.50.67:50001/2d0dfb4c-0ce7-4639-a125-7866b3eacd36
+speech.js:598 TTS: Starting audio playback
+speech.js:583 TTS: Audio loaded successfully, duration: 1.848
+index.js:487 TTS: Queue item finished playing
+index.js:476 *** TTS: Finished playing, processing next item - queue length: 0
+index.js:450 *** TTS: processQueue called - isPlaying: false queue length: 0
+
+
+
+
+
+User message
+hello search some adult joke for meCopy
+Agent 0: Generating
+Thoughts	
+User is looking for adult jokes.
+I will perform a web search for funny adult jokes.
+I will extract relevant URLs from the search results.
+Copy
+Tool Name	
+brave.brave_web_search
+Copy
+Query	
+funny adult jokes
+Copy
+Count	
+5
+Copy
+Agent 0: Using tool 'brave.brave_web_search'
+Title: Funny Adult Jokes & Humour
+Description: See posts, photos and more on Facebook
+URL: https://www.facebook.com/groups/funnyadultjokesandhumour/
+
+Title: Sex Jokes
+Description: Watch our huge library of the best stand-up comedy videos, get information on our stand-up comedians, read our <strong>joke</strong> of the day, and buy tickets to live shows at our comedy clubs.
+URL: https://www.laughfactory.com/jokes/sex-jokes
+
+Title: 105 Dirty Jokes That Will Definitely Make You Blush
+Description: Related: LOL! 101 Knock Knock <strong>Jokes</strong> For Kids and <strong>Adults</strong> That Are So Bad They&#x27;re <strong>Funny</strong> Good
+URL: https://parade.com/living/dirty-jokes
+
+Title: r/AskReddit on Reddit: What are your best dirty jokes? GO!
+Description: 315 votes, 1.1K comments. 46M subscribers in the AskReddit community. r/AskReddit is the place to ask and answer thought-provoking questions.
+URL: https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/
+
+Title: 170 Funny, Corny Jokes for Kids and Adults
+Description: These cute dad <strong>jokes</strong> <strong>and</strong> <strong>funny</strong> one-liners will have <strong>adults</strong> and kids laughing until their bellies hurt. Check out some of the best corny <strong>jokes</strong> of 2025.
+URL: https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/Copy
+Agent 0: Generating
+Thoughts	
+I found several sources with adult jokes.
+I will present the URLs for the user to explore.
+The user can choose which source they want to check out.
+Copy
+Tool Name	
+response
+Copy
+Text	
+**Here are some sources for funny adult jokes:**
+
+1. [Funny Adult Jokes & Humour](https://www.facebook.com/groups/funnyadultjokesandhumour/)
+2. [Sex Jokes - Laugh Factory](https://www.laughfactory.com/jokes/sex-jokes)
+3. [105 Dirty Jokes That Will Definitely Make You Blush](https://parade.com/living/dirty-jokes)
+4. [r/AskReddit: What are your best dirty jokes?](https://www.reddit.com/r/AskReddit/comments/axoin/what_are_your_best_dirty_jokes_go/)
+5. [170 Funny, Corny Jokes for Kids and Adults](https://www.goodhousekeeping.com/life/entertainment/a41779929/corny-jokes/)
+
+Feel free to check them out for a good laugh! 😂
+Copy
+Agent 0: Responding
+Here are some sources for funny adult jokes:
+
+Funny Adult Jokes & Humour
+Sex Jokes - Laugh Factory
+105 Dirty Jokes That Will Definitely Make You Blush
+r/AskReddit: What are your best dirty jokes?
+170 Funny, Corny Jokes for Kids and Adults
+Feel free to check them out for a good laugh! 😂

@@ -1,0 +1,98 @@
+# Ignore common unwanted files globally
+**/.DS_Store
+**/._*
+**/.env
+!example.env
+**/__pycache__/
+**/.conda/
+
+# Python compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Python testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Ignore docker/run/agent-zero directory
+docker/run/agent-zero/
+
+# Ignore cursor rules
+.cursor/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ignore test files in root dir
+/*.test.py
+
+# Ignore git internal files (for bundler)
+.git/
+
+# Ignore all contents of the virtual environment directory
+.venv/
+
+# Handle bundle directory
+bundle/*/
+!bundle/mac_pkg_scripts
+
+# Handle work_dir directory
+work_dir/*
+
+# Handle specific docker directories
+docker/run/agent-zero/**
+
+# Handle memory directory
+memory/**
+!memory/**/
+
+# Handle logs directory
+logs/*
+
+# Handle tmp directory
+tmp/*
+
+# Handle knowledge directory
+knowledge/**
+!knowledge/**/
+# Explicitly allow the default folder in knowledge
+!knowledge/default/
+!knowledge/default/**
+
+# Handle instruments directory
+instruments/**
+!instruments/**/
+# Explicitly allow the default folder in instruments
+!instruments/default/
+!instruments/default/**
+
+# SSL certificates (security sensitive)
+ssl/*.pem
+ssl/*.key
+ssl/*.crt
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Global rule to include .gitkeep files anywhere
+!**/.gitkeep
+
+# Generated files
+**/agent_history.gif
+
+# Backup folders
+docs_backup/
