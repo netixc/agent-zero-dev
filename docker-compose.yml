@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  agent-zero:
+    build: .
+    image: agent-zero-local
+    container_name: agent-zero
+    
+    # CRITICAL: These give access to host system
+    volumes:
+      # Mount entire host filesystem
+      - /:/host:rw
+      
+      # Mount your home directory for easier access
+      - ${HOME}:/home/host-user:rw
+      
+      # Mount SSL certificates from host
+      - ./ssl:/app/ssl:ro
+      
+      # Mount .env file
+      - ./.env:/app/.env:ro
+      
+      # Optional: Mount specific work directories
+      - ${HOME}/projects:/projects:rw
+    
+    # Network mode host for full network access
+    network_mode: host
+    
+    # Required for full host access
+    privileged: true
+    
+    environment:
+      # Tell Agent Zero it's running with host access
+      - HOST_MODE=true
+      - HOST_HOME=${HOME}
+      - HOST_USER=${USER}
+      
+      # SSL/HTTPS settings
+      - WEB_UI_HOST=0.0.0.0
+      - WEB_UI_PORT=443
+    
+    # Keep stdin open and allocate TTY
+    stdin_open: true
+    tty: true
+    
+    # Restart policy
+    restart: unless-stopped

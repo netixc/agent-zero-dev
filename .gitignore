@@ -96,3 +96,8 @@ ssl/*.crt
 
 # Backup folders
 docs_backup/
+
+# Docker host mode specific
+ssl/*.pem
+ssl/*.key
+.docker-env

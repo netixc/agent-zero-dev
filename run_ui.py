@@ -18,6 +18,15 @@ from python.helpers.extract_tools import load_classes_from_folder
 from python.helpers.api import ApiHandler
 from python.helpers.print_style import PrintStyle
 
+# Docker host mode detection
+if os.environ.get('HOST_MODE') == 'true':
+    # Change working directory to host home if specified
+    host_home = os.environ.get('HOST_HOME')
+    if host_home and os.path.exists(f'/host{host_home}'):
+        os.chdir(f'/host{host_home}')
+        PrintStyle().print(f"Docker Host Mode: Changed working directory to /host{host_home}")
+    else:
+        PrintStyle().print("Docker Host Mode: Running with full host access")
 
 # Set the new timezone to 'UTC'
 os.environ["TZ"] = "UTC"
