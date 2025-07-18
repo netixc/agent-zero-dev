@@ -27,6 +27,8 @@ export const speechStore = createStore('speech', {
   currentAudio: null,
   audioContext: null,
   userHasInteracted: false,
+  speechQueue: [],
+  isProcessingQueue: false,
   
   // STT State
   microphoneInput: null,
@@ -92,7 +94,6 @@ export const speechStore = createStore('speech', {
   // Main speak function
   async speak(text) {
     if (!this.tts_enabled) return;
-    if (this.isSpeaking) return;
 
     text = this.cleanText(text);
     if (!text.trim()) return;
@@ -100,6 +101,49 @@ export const speechStore = createStore('speech', {
     if (!this.userHasInteracted) {
       this.showAudioPermissionPrompt();
       return;
+    }
+
+    // Add to queue
+    this.speechQueue.push(text);
+    
+    // Process queue if not already processing
+    if (!this.isProcessingQueue) {
+      this.processQueue();
+    }
+  },
+  
+  // Process speech queue sequentially
+  async processQueue() {
+    if (this.isProcessingQueue || this.speechQueue.length === 0) return;
+    
+    this.isProcessingQueue = true;
+    
+    while (this.speechQueue.length > 0) {
+      const text = this.speechQueue.shift();
+      
+      try {
+        await this.speakSingle(text);
+        // Small pause between utterances
+        await new Promise(resolve => setTimeout(resolve, 200));
+      } catch (error) {
+        console.error("TTS error:", error);
+      }
+    }
+    
+    this.isProcessingQueue = false;
+  },
+  
+  // Speak a single text
+  async speakSingle(text) {
+    if (this.isSpeaking) {
+      await new Promise(resolve => {
+        const checkSpeaking = setInterval(() => {
+          if (!this.isSpeaking) {
+            clearInterval(checkSpeaking);
+            resolve();
+          }
+        }, 100);
+      });
     }
 
     try {
@@ -121,26 +165,40 @@ export const speechStore = createStore('speech', {
 
   // Browser TTS
   speakWithBrowser(text) {
+    console.log("[TTS] Using browser TTS for:", text);
     this.browserUtterance = new SpeechSynthesisUtterance(text);
-    this.browserUtterance.onstart = () => { this.isSpeaking = true; };
-    this.browserUtterance.onend = () => { this.isSpeaking = false; };
+    this.browserUtterance.onstart = () => { 
+      this.isSpeaking = true; 
+      console.log("[TTS] Browser TTS started");
+    };
+    this.browserUtterance.onend = () => { 
+      this.isSpeaking = false; 
+      console.log("[TTS] Browser TTS ended");
+    };
+    this.browserUtterance.onerror = (e) => {
+      console.error("[TTS] Browser TTS error:", e);
+      this.isSpeaking = false;
+    };
     this.synth.speak(this.browserUtterance);
   },
 
   // Kokoro TTS
   async speakWithKokoro(text) {
+    console.log("[TTS] Attempting Kokoro TTS for:", text);
     try {
       const response = await sendJsonData("/synthesize", { text });
+      console.log("[TTS] Kokoro response:", response);
       
       if (response.success) {
         if (response.audio_parts) {
+          console.log("[TTS] Playing multiple audio parts:", response.audio_parts.length);
           // Multiple chunks - play sequentially
           for (const audioPart of response.audio_parts) {
             await this.playAudio(audioPart);
             await new Promise(resolve => setTimeout(resolve, 100)); // Brief pause
           }
         } else if (response.audio) {
-          // Single audio
+          console.log("[TTS] Playing single audio");
           await this.playAudio(response.audio);
         }
       } else {
@@ -156,18 +214,22 @@ export const speechStore = createStore('speech', {
 
   // Play base64 audio
   async playAudio(base64Audio) {
+    console.log("[TTS] Playing audio, base64 length:", base64Audio.length);
     return new Promise((resolve, reject) => {
       const audio = new Audio();
       
       audio.onplay = () => { 
         this.isSpeaking = true; 
+        console.log("[TTS] Audio playback started");
       };
       audio.onended = () => { 
         this.isSpeaking = false;
         this.currentAudio = null;
+        console.log("[TTS] Audio playback ended");
         resolve();
       };
       audio.onerror = (error) => {
+        console.error("[TTS] Audio playback error:", error);
         this.isSpeaking = false;
         this.currentAudio = null;
         reject(error);
@@ -177,6 +239,7 @@ export const speechStore = createStore('speech', {
       this.currentAudio = audio;
       
       audio.play().catch(error => {
+        console.error("[TTS] Audio play() failed:", error);
         this.isSpeaking = false;
         this.currentAudio = null;
         
@@ -202,6 +265,8 @@ export const speechStore = createStore('speech', {
     }
     
     this.isSpeaking = false;
+    this.speechQueue = [];
+    this.isProcessingQueue = false;
   },
 
   // Clean text for TTS

@@ -12,7 +12,7 @@ class Synthesize(ApiHandler):
         ctxid = input.get("ctxid", "")
         
         # DEBUG: Log what we received
-        print(f"[SYNTHESIZE DEBUG] Received text: '{text[:100]}...' (length: {len(text)})")
+        print(f"[SYNTHESIZE DEBUG] Received text: '{text}' (length: {len(text)})")
 
         context = self.get_context(ctxid)
         if await kokoro_tts.is_downloading():
@@ -25,7 +25,7 @@ class Synthesize(ApiHandler):
             
             if len(chunks) == 1:
                 # Single chunk - return as before
-                audio = await kokoro_tts.synthesize_sentences(chunks)
+                audio = await kokoro_tts.synthesize_sentences([chunks[0]])
                 return {"audio": audio, "success": True}
             else:
                 # Multiple chunks - return as sequence

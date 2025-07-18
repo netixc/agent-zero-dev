@@ -240,6 +240,7 @@ updateUserTime();
 setInterval(updateUserTime, 1000);
 
 function setMessage(id, type, heading, content, temp, kvps = null) {
+  checkTTSInSetMessage(id, type, heading, content, temp, kvps);
   const result = msgs.setMessage(id, type, heading, content, temp, kvps);
   if (autoScroll) chatHistory.scrollTop = chatHistory.scrollHeight;
   return result;
@@ -496,19 +497,139 @@ function afterMessagesUpdate(logs) {
   }
 }
 
+// TTS streaming variables
+let responseStates = new Map(); // Track state per response ID
+let ttsQueue = []; // Queue for TTS requests
+let isPlaying = false; // Track if TTS is currently playing
+let responseTimers = new Map(); // Track timers for response completion
+
 function speakMessages(logs) {
-  // EXTENDED FIX: Only speak VERY long responses to ensure completeness
-  for (let i = logs.length - 1; i >= 0; i--) {
-    const log = logs[i];
-    if (log.type == "response" && !log.temp) {
-      if (log.no > lastSpokenNo && log.content.length > 300) { // Much higher threshold
-        lastSpokenNo = log.no;
-        console.log(`[SPEECH] Speaking full response (${log.content.length} chars): "${log.content.substring(0, 200)}..."`);
-        speech.speak(log.content);
-        return;
-      } else if (log.content.length <= 300) {
-        console.log(`[SPEECH] Skipping short response (${log.content.length} chars): "${log.content.substring(0, 100)}..."`);
+  // Legacy function - TTS now handled in setMessage
+  // Kept for compatibility
+}
+
+// Queue management for sequential TTS playback
+function queueTTS(text) {
+  console.log(`[TTS] Queueing: "${text}"`);
+  ttsQueue.push(text);
+  processQueue();
+}
+
+async function processQueue() {
+  if (isPlaying || ttsQueue.length === 0) return;
+  
+  isPlaying = true;
+  const text = ttsQueue.shift();
+  
+  console.log(`[TTS] Speaking from queue: "${text}"`);
+  
+  try {
+    await speakAndWait(text);
+  } catch (error) {
+    console.error("TTS queue error:", error);
+  }
+  
+  isPlaying = false;
+  processQueue(); // Process next item
+}
+
+function speakAndWait(text) {
+  return new Promise((resolve) => {
+    speech.speak(text);
+    
+    // Check if speechStore is available and has currentAudio
+    if (window.speechStore && window.speechStore.currentAudio) {
+      const checkAudio = setInterval(() => {
+        if (!window.speechStore.isSpeaking) {
+          clearInterval(checkAudio);
+          resolve();
+        }
+      }, 100);
+    } else {
+      // Fallback: estimate time based on text length
+      const estimatedTime = Math.max(1000, text.length * 50);
+      setTimeout(resolve, estimatedTime);
+    }
+  });
+}
+
+// New TTS processing for streaming responses
+function checkTTSInSetMessage(id, type, heading, content, temp, kvps) {
+  if (localStorage.getItem("speech") !== "true") return;
+  
+  if (type === "response" && content && content.trim()) {
+    // Initialize state for new response
+    if (!responseStates.has(id)) {
+      responseStates.set(id, {
+        processedText: "",
+        currentSentence: "",
+        isComplete: false
+      });
+    }
+    
+    const state = responseStates.get(id);
+    
+    // Clear any existing timer for this response
+    if (responseTimers.has(id)) {
+      clearTimeout(responseTimers.get(id));
+    }
+    
+    // Set a timer to handle remaining text after response stops updating
+    const timer = setTimeout(() => {
+      if (state.currentSentence.trim().length > 3 && !state.isComplete) {
+        // Speak any remaining text
+        let remainingText = state.currentSentence.trim();
+        
+        // Add appropriate punctuation if missing
+        if (!remainingText.match(/[.!?]$/)) {
+          if (remainingText.toLowerCase().includes('?') || 
+              remainingText.toLowerCase().startsWith('how') || 
+              remainingText.toLowerCase().startsWith('what') || 
+              remainingText.toLowerCase().startsWith('where') ||
+              remainingText.toLowerCase().startsWith('when') ||
+              remainingText.toLowerCase().startsWith('why') ||
+              remainingText.toLowerCase().startsWith('can') ||
+              remainingText.toLowerCase().includes('help you')) {
+            remainingText += '?';
+          } else {
+            remainingText += '.';
+          }
+        }
+        
+        queueTTS(remainingText);
+        state.currentSentence = '';
+        state.isComplete = true;
       }
+      responseTimers.delete(id);
+    }, 1000); // Wait 1 second of no updates before speaking remaining text
+    
+    responseTimers.set(id, timer);
+    
+    // Clean content
+    const cleanContent = content
+      .replace(/^#+\s*/gm, '') // Remove markdown headers
+      .replace(/\*\*(.*?)\*\*/g, '$1') // Remove bold markdown
+      .replace(/\*(.*?)\*/g, '$1') // Remove italic markdown
+      .replace(/`(.*?)`/g, '$1') // Remove code markdown
+      .trim();
+    
+    // Process new chunks
+    const newChunk = cleanContent.substring(state.processedText.length);
+    if (newChunk.length > 0) {
+      state.currentSentence += newChunk;
+      
+      // Process ALL complete sentences in the buffer
+      let sentenceEndMatch;
+      while ((sentenceEndMatch = state.currentSentence.match(/^(.*?[.!?]+)(\s|$)/))) {
+        const completeSentence = sentenceEndMatch[1].trim();
+        // Only speak if it's a reasonable sentence length
+        if (completeSentence.length > 10) {
+          queueTTS(completeSentence);
+        }
+        state.currentSentence = state.currentSentence.substring(sentenceEndMatch[0].length).trim();
+      }
+      
+      state.processedText = cleanContent;
     }
   }
 }
