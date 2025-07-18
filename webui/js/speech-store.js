@@ -37,7 +37,6 @@ export const speechStore = createStore('speech', {
   // Initialize speech functionality
   async init() {
     await this.loadSettings();
-    this.setupBrowserTTS();
     this.setupUserInteractionHandling();
   },
 
@@ -61,11 +60,6 @@ export const speechStore = createStore('speech', {
     }
   },
 
-  // Setup browser TTS
-  setupBrowserTTS() {
-    this.synth = window.speechSynthesis;
-    this.browserUtterance = null;
-  },
 
   // Setup user interaction handling for autoplay policy
   setupUserInteractionHandling() {
@@ -146,12 +140,7 @@ export const speechStore = createStore('speech', {
       });
     }
 
-    try {
-      await this.speakWithKokoro(text);
-    } catch (error) {
-      console.error("TTS error:", error);
-      this.speakWithBrowser(text);
-    }
+    await this.speakWithKokoro(text);
   },
 
   // Show a prompt to user to enable audio
@@ -163,24 +152,6 @@ export const speechStore = createStore('speech', {
     }
   },
 
-  // Browser TTS
-  speakWithBrowser(text) {
-    console.log("[TTS] Using browser TTS for:", text);
-    this.browserUtterance = new SpeechSynthesisUtterance(text);
-    this.browserUtterance.onstart = () => { 
-      this.isSpeaking = true; 
-      console.log("[TTS] Browser TTS started");
-    };
-    this.browserUtterance.onend = () => { 
-      this.isSpeaking = false; 
-      console.log("[TTS] Browser TTS ended");
-    };
-    this.browserUtterance.onerror = (e) => {
-      console.error("[TTS] Browser TTS error:", e);
-      this.isSpeaking = false;
-    };
-    this.synth.speak(this.browserUtterance);
-  },
 
   // Kokoro TTS
   async speakWithKokoro(text) {
@@ -203,11 +174,15 @@ export const speechStore = createStore('speech', {
         }
       } else {
         console.error("Kokoro TTS error:", response.error);
-        this.speakWithBrowser(text);
+        if (window.toast) {
+          window.toast("TTS error: " + response.error, "error");
+        }
       }
     } catch (error) {
       console.error("Kokoro TTS error:", error);
-      this.speakWithBrowser(text);
+      if (window.toast) {
+        window.toast("TTS connection error", "error");
+      }
     }
   },
 
@@ -254,10 +229,6 @@ export const speechStore = createStore('speech', {
 
   // Stop all speech
   stop() {
-    if (this.synth?.speaking) {
-      this.synth.cancel();
-    }
-    
     if (this.currentAudio) {
       this.currentAudio.pause();
       this.currentAudio.currentTime = 0;
