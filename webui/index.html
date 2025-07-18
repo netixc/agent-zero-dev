@@ -292,8 +292,8 @@
                                     <span class="slider"></span>
                                 </label>
                             </li>
-                            <li x-data="{ speech: localStorage.getItem('speech') == 'true' }"
-                                x-init="$watch('speech', val => toggleSpeech(val))">
+                            <li x-data="{ speech: localStorage.getItem('speech') !== 'false' }"
+                                x-init="$watch('speech', val => toggleSpeech(val)); if (localStorage.getItem('speech') === null) localStorage.setItem('speech', 'true')">
                                 <span class="switch-label">Speech</span>
                                 <label class="switch">
                                     <input type="checkbox" x-model="speech">

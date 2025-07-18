@@ -5,6 +5,13 @@ import { sleep } from "/js/sleep.js";
 import { store as attachmentsStore } from "/components/chat/attachments/attachmentsStore.js";
 import { store as speechStore } from "/components/chat/speech/speech-store.js";
 
+// Debug speech store availability
+console.log("Speech store imported:", speechStore);
+console.log("Speech store type:", typeof speechStore);
+
+// Make speech store available globally for debugging
+window.speechStore = speechStore;
+
 window.fetchApi = api.fetchApi; // TODO - backward compatibility for non-modular scripts, remove once refactored to alpine
 
 const leftPanel = document.getElementById("left-panel");
@@ -498,25 +505,32 @@ async function poll() {
 }
 
 function afterMessagesUpdate(logs) {
-  if (localStorage.getItem("speech") == "true") {
+  const speechEnabled = localStorage.getItem("speech") == "true";
+  console.log("afterMessagesUpdate called with speechEnabled:", speechEnabled, "logs:", logs.length);
+  if (speechEnabled) {
     speakMessages(logs);
   }
 }
 
 function speakMessages(logs) {
+  console.log("speakMessages called with logs:", logs.length);
   if (skipOneSpeech) {
+    console.log("Skipping one speech");
     skipOneSpeech = false;
     return;
   }
+  
   // log.no, log.type, log.heading, log.content
   for (let i = logs.length - 1; i >= 0; i--) {
     const log = logs[i];
+    console.log("Processing log:", log.type, "finished:", log.kvps?.finished);
 
     // if already spoken, end
     // if(log.no < lastSpokenNo) break;
 
-    // finished response
+    // finished response - trigger TTS immediately with any content
     if (log.type == "response") {
+      console.log("Found response log, calling speechStore.speakStream");
       // lastSpokenNo = log.no;
       speechStore.speakStream(
         getChatBasedId(log.no),
@@ -533,11 +547,13 @@ function speakMessages(logs) {
       log.kvps.tool_args &&
       log.kvps.tool_name != "response"
     ) {
+      console.log("Found agent log with headline, calling speechStore.speakStream");
       // lastSpokenNo = log.no;
       speechStore.speakStream(getChatBasedId(log.no), log.kvps.headline, true);
       return;
     }
   }
+  console.log("No applicable logs found for TTS");
 }
 
 function updateProgress(progress, active) {
@@ -795,9 +811,13 @@ window.toggleDarkMode = function (isDark) {
 };
 
 window.toggleSpeech = function (isOn) {
-  console.log("Speech:", isOn);
+  console.log("toggleSpeech called with:", isOn);
+  console.log("speechStore available:", !!speechStore);
   localStorage.setItem("speech", isOn);
-  if (!isOn) speechStore.stopAudio();
+  if (!isOn) {
+    console.log("Stopping audio");
+    speechStore.stopAudio();
+  }
 };
 
 window.nudge = async function () {
